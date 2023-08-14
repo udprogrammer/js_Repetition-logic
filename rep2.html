@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="table" /><br /><br />
+    <input type="submit" onclick="num()" /><br /><br />
+    <h1 id="series"></h1>
+    <script>
+      let n1 = 0;
+      let n2 = 1;
+      let sum;
+      function num() {
+        let number = parseInt(document.getElementById("table").value);
+        for (let i = 1; i <= number; i++) {
+          console.log(n1);
+          document.getElementById("series").innerHTML += n1 + ", ";
+          sum = n1 + n2;
+          n1 = n2;
+          n2 = sum;
+        }
+      }
+    </script>
+  </body>
+</html>

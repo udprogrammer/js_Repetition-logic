@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="table" /><br /><br />
+    <input type="submit" onclick="num()" /><br /><br />
+    <h1 id="number"></h1>
+    <script>
+      let a = 1;
+      function num() {
+        let n = parseInt(document.getElementById("table").value);
+        for (let i = 0; i < n; i++) {
+          document.getElementById("number").innerHTML += a;
+          if (i < n) {
+            document.getElementById("number").innerHTML += " + ";
+          }
+          a = a * 10 + 1;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="table" />
+    <input type="submit" onclick="num()" /><br />
+    sum and average :
+    <h1 id="avg"></h1>
+    <script>
+      function num() {
+        let a = parseInt(document.getElementById("table").value);
+        let avg = 0;
+        for (let i = 1; i <= a; i++) {
+          avg += i / a;
+          if (avg <= 10) {
+            document.getElementById("avg").innerHTML = avg;
+          } else {
+            document.getElementById("avg").innerHTML =
+              "Please Enter proper number!";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
